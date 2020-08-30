@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #2f3640;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.text-muted {
+  color: darkgray;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  background-color: #2f3640;
+  z-index: 999;
+  /* border-bottom: 1px solid black; */
+  padding: 0 10vw;
+  height: 40px;
+  align-items: center;
+}
+
+#logo {
+  color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: -.5px;
+  margin: 0 5px;
+  padding-bottom: 1px;
+}
+
+nav a:hover {
+  border-bottom: 2.5px solid #2f3640;
+}
+
+.section {
+  margin: 0 10vw;
+  width: 80vw;
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  /* border: 1px solid red; */
+}
+
+.section-header {
+  margin-bottom: 50px;
+  padding-bottom: 3px;
+  border-bottom: 3px solid black;
+}
+
+#home {
+  border: 0.1px solid transparent;
+  height: calc(100vh - 40px);
+  position: relative;
+}
+
+.header {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: 30vh;
+}
+
+.square-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: lightgreen;
+  width: 50vw;
+  height: calc(100vh - 40px);
+  z-index: -1;
+}
+
+.header span {
+  text-align: center;
+  display: block;
+  font-size: 1.2rem;
+}
+
+#edu {
+  margin-top: -5px;
+}
+
+#hello {
+  margin-bottom: 2.5px;
+}
+
+.header h2 {
+  margin-bottom: 2.5px;
+}
+
+
+
+#down {
+  margin-top: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#cv-button {
+  margin: 15px 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+#about-content {
+  /* border: 1px solid blue; */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  
+}
+
+#about-img {
+  width: 40vw;
+  /* border: 1px solid red; */
+  padding: 0 7.5vw;
+}
+
+#profile-pict {
+  max-width: 350px;
+  /* width: auto; */
+  float: right;
+  border-radius: 10px;
+}
+
+#about-text {
+  /* border: 1px solid green; */
+  width: 40vw;
+  padding: 120px 0;
+}
+
+#about-text h2 {
+  margin: 10px 0;
+}
+
+#about-text li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+#about-text i {
+  display: inline-block;
+  margin-right: 7.5px;
+}
+
+.button-group {
+  margin-bottom: 30px;
+}
+
+#experience {
+  min-height: 80vh;
+  position: relative;
+}
+
+.experience-button {
+  padding: 5px 10px;
+  outline: none;
+  box-shadow: none;
+}
+
+.experience-button:focus {
+  outline: none;
+}
+
+.green-button {
+  background-color: lightgreen;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.experience-item {
+  /* border: 1px solid green; */
+  width: 60vw;
+  padding: 5px 10px;
+}
+
+.experience-item span {
+  display: block;
+  margin: 10px 0;
+}
+
+.experience-header {
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: space-between;
+}
+
+.experience-title {
+  font-size: 1.2rem;
+}
+
+.experience-company {
+  font-weight: 700;
+}
+
+footer {
+  color: white;
+  position: absolute;
+  width: 100vw;
+  height: 150px;
+  background: #2f3640;
+  z-index: -999;
+  padding: 40px 10vw;
+  text-align: center;
+}
+
+footer span {
+  color: white;
+  letter-spacing: 2px;
+}
+
+#icons {
+  margin-top: 20px;
+}
+
+#icons i {
+  color: white;
+  font-size: 25px;
+  margin: 0 10px;
+}
+
+@media (max-width: 1080px) {
+  #profile-pict {
+    max-width: 200px;
+  }
+
+  #about-text {
+    padding: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  #profile-pict {
+    max-width: 150px;
+  }
+
+  .section {
+    min-height: 80vh;
+  }
+
+  #about {
+    min-height: 60vh;
+  }
+
+  #about-text {
+    padding: 0;
+    font-size: 0.7rem;
+  }
+
+  .experience-header {
+    font-size: 0.8rem;
+  }
+}
