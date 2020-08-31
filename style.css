@@ -43,6 +43,7 @@ nav {
   padding: 0 10vw;
   height: 40px;
   align-items: center;
+  font-size: 1.2rem;
 }
 
 #logo {
@@ -122,12 +123,12 @@ nav a:hover {
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 20px 100px;
-  border-radius: 30px;
+  padding: 30px 100px;
+  border-radius: 50px;
   border: none;
   color: white;
   background-color: #ff748b;
-  font-size: 1.2rem;
+  font-size: 1.75rem;
   font-weight: 700;
 }
 
