@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +35,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif, sans-serif;
   position: sticky;
   left: 0;
   top: 0;
@@ -45,12 +48,14 @@ nav {
   font-size: 1.2rem;
 }
 
-#logo {
+#logo a {
   color: black;
+  font-family: 'Yellowtail', cursive;
+  font-size: 2rem;
 }
 
 nav a {
-  color: black;
+  color: #2f3640;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: -.5px;
@@ -59,7 +64,7 @@ nav a {
 }
 
 nav a:hover {
-  border-bottom: 2.5px solid #2f3640;
+  border-bottom: 2.5px solid #ff748b;
 }
 
 .section {
@@ -74,7 +79,7 @@ nav a:hover {
 .section-header {
   margin-bottom: 50px;
   padding-bottom: 3px;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #ff748b;
 }
 
 #home {
@@ -167,6 +172,7 @@ nav a:hover {
   display: block;
   margin: 5px 0;
   font-size: 3rem;
+  letter-spacing: 2px;
 }
 
 #icons-header {
