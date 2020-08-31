@@ -6,7 +6,8 @@
   font-family: "Trebuchet MS", sans-serif;
 }
 
-body {
+html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -16,6 +17,11 @@ body {
 
 p {
   word-wrap: break-word;
+}
+
+button {
+  color: white;
+  background-color: #ff748b;
 }
 
 button:hover {
@@ -31,7 +37,7 @@ nav {
   left: 0;
   top: 0;
   width: 100vw;
-  background-color: #2f3640;
+  background-color: white;
   z-index: 999;
   /* border-bottom: 1px solid black; */
   padding: 0 10vw;
@@ -40,11 +46,11 @@ nav {
 }
 
 #logo {
-  color: white;
+  color: black;
 }
 
 nav a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: -.5px;
@@ -75,8 +81,62 @@ nav a:hover {
 
 #home {
   border: 0.1px solid transparent;
-  height: calc(100vh - 40px);
+  min-height: calc(100vh - 40px);
   position: relative;
+  display: grid;
+  grid-template-areas: 
+  "info ."
+  "info photo"
+  "info .";
+  /* border: 1px solid black; */
+  padding: 0 10vw;
+}
+
+.image-header {
+  grid-area: photo;
+  /* border: 1px solid red; */
+  position: relative;
+}
+
+.backshape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #81ecec;
+  width: 400px;
+  height: 600px;
+  border-radius: 77% 23% 71% 29% / 67% 56% 44% 33% ;
+  z-index: -999;
+}
+
+
+
+.img-container {
+  /* border: 1px solid green; */
+  position: relative;
+}
+
+.img-button {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 100px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  background-color: #ff748b;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#landing-img {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  z-index: 999;
+  /* border: 1px solid red; */
 }
 
 .header {
@@ -84,52 +144,115 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100vw;
-  margin-top: 30vh;
+  /* align-items: center; */
+  /* border: 1px solid blue; */
+  grid-area: info;
 }
 
 .square-background {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: lightgreen;
-  width: 50vw;
+  /* background-color: lightgrey; */
+  width: 100vw;
   height: calc(100vh - 40px);
-  z-index: -1;
+  z-index: -999;
 }
 
 .header span {
-  text-align: center;
+  /* text-align: center; */
   display: block;
   font-size: 1.2rem;
 }
 
-#edu {
-  margin-top: -5px;
-}
 
 #hello {
-  margin-bottom: 2.5px;
+  font-size: 1rem;
 }
 
-.header h2 {
-  margin-bottom: 2.5px;
+#desc {
+  font-size: 1.25rem;
 }
 
+.header h1 {
+  display: block;
+  margin: 5px 0;
+  font-size: 3rem;
+}
 
-
-#down {
+#icons-header {
   margin-top: 20px;
+  display: flex;
+  justify-content: start;
+}
+
+a {
+  text-decoration: none;
+}
+
+#icons-header i {
+  text-align: center;
+  line-height: 50px;
+  display: block;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  margin: 0 4px;
+  font-size: 1.25rem;
+  transition: 0.1s ease-out;
 }
+
+#icons-header .fa-twitter {
+  border: 1px solid #1DA1F2;
+  color: #1DA1F2;
+}
+
+#icons-header .fa-twitter:hover {
+  background-color: #1DA1F2;
+  color: white;
+}
+
+#icons-header .fa-instagram {
+  border: 1px solid #E1306C;
+  color: #E1306C;
+}
+
+#icons-header .fa-instagram:hover {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  color: white;
+  border: none;
+}
+
+#icons-header .fa-linkedin-in {
+  border: 1px solid #2867B2;
+  color: #2867B2;
+}
+
+#icons-header .fa-linkedin-in:hover {
+  background-color: #2867B2;
+  color: white;
+}
+
+#icons-header .fa-github {
+  border: 1px solid #333;
+  color: #333;
+}
+
+#icons-header .fa-github:hover {
+  background-color: #333;
+  color: white;
+}
+
 
 #cv-button {
   margin: 15px 0;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 20px 40px;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
 }
 
 #about-content {
@@ -137,17 +260,29 @@ nav a:hover {
   display: flex;
   width: 100%;
   justify-content: center;
-  
 }
 
 #about-img {
+  position: relative;
   width: 40vw;
   /* border: 1px solid red; */
   padding: 0 7.5vw;
 }
 
+.backshape-about {
+  position: absolute;
+  top: 50%;
+  left: 5vw;
+  transform: translate(0, -50%);
+  background-color: #81ecec;
+  width: 400px;
+  height: 600px;
+  border-radius: 27% 73% 9% 91% / 55% 68% 32% 45% ;
+  z-index: -999;
+}
+
 #profile-pict {
-  max-width: 350px;
+  max-width: 400px;
   /* width: auto; */
   float: right;
   border-radius: 10px;
@@ -171,10 +306,12 @@ nav a:hover {
 #about-text i {
   display: inline-block;
   margin-right: 7.5px;
+  color: #ff748b;
 }
 
 .button-group {
   margin-bottom: 30px;
+  display: flex;
 }
 
 #experience {
@@ -186,6 +323,8 @@ nav a:hover {
   padding: 5px 10px;
   outline: none;
   box-shadow: none;
+  border: none;
+  display: block;
 }
 
 .experience-button:focus {
@@ -193,7 +332,7 @@ nav a:hover {
 }
 
 .green-button {
-  background-color: lightgreen;
+  background-color: #81ecec;
 }
 
 .experience-list {
@@ -203,24 +342,39 @@ nav a:hover {
 }
 
 .experience-item {
-  /* border: 1px solid green; */
-  width: 60vw;
-  padding: 5px 10px;
+  width: 80vw;
+  padding: 10px 10px;
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+.experience-text {
+    /* border: 1px solid pink; */
+    width: 100%;
 }
 
 .experience-item span {
   display: block;
+}
+
+.experience-item img {
+  margin-right: 20px;
+}
+
+.experience-company, .experience-description {
   margin: 10px 0;
 }
 
 .experience-header {
   display: flex;
-  /* border: 1px solid red; */
   justify-content: space-between;
+  /* border: 1px solid black; */
+  width: 100%;
 }
 
 .experience-title {
   font-size: 1.2rem;
+  /* border: 1px solid blue; */
 }
 
 .experience-company {
@@ -231,10 +385,9 @@ footer {
   color: white;
   position: absolute;
   width: 100vw;
-  height: 150px;
   background: #2f3640;
   z-index: -999;
-  padding: 40px 10vw;
+  padding: 10px 10vw;
   text-align: center;
 }
 
@@ -247,21 +400,91 @@ footer span {
   margin-top: 20px;
 }
 
-#icons i {
+footer #icons i {
   color: white;
   font-size: 25px;
   margin: 0 10px;
 }
 
 @media (max-width: 1080px) {
-  #profile-pict {
-    max-width: 200px;
+  
+
+  /* .experience-header {
+    font-size: 0.8rem;
+  } */
+
+  .experience-text {
+      font-size: 0.8rem;
   }
 
+  /* .experience-title {
+      font-size: 1rem;
+  } */
+/* 
   #about-text {
     padding: 0;
+  } */
+}
+
+
+@media (max-width: 800px) {
+  #landing-img {
+    width: 300px;
+  }
+
+  #about-img {
+    padding: 0 5vw;
+  }
+
+  #profile-pict {
+    max-width: 300px;
+  }
+
+  .backshape {
+    width: 300px;
+    height: 575px;
+  }
+
+  #hello {
+    font-size: 1rem;
+  }
+  
+  #desc {
+    font-size: 1.1rem;
+  }
+  
+  .header h1 {
+    display: block;
+    margin: 5px 0;
+    font-size: 2.25rem;
+  }
+
+  .backshape-about {
+    width: 200px;
+    height: 500px;
+  }
+
+  #about-img {
+    padding: 0;
+  }
+
+  #cv-button {
+    padding: 7.5px 20px;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .img-button {
+    padding: 15px 50px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: #ff748b;
+    font-size: 1.2rem;
+    font-weight: 700;
   }
 }
+
 
 @media (max-width: 640px) {
   #profile-pict {
@@ -270,6 +493,10 @@ footer span {
 
   .section {
     min-height: 80vh;
+  }
+
+  .section h1 {
+    font-size: 1.75rem;
   }
 
   #about {
@@ -281,7 +508,43 @@ footer span {
     font-size: 0.7rem;
   }
 
-  .experience-header {
+  .experience-title {
     font-size: 0.8rem;
+    }
+
+  .experience-header {
+    font-size: 0.6rem;
+  }
+
+  #home {
+    grid-template-areas: 
+    "photo"
+    "info";
+    /* border: 1px solid black; */
+    padding: 0;
+  }
+
+  .backshape {
+    width: 300px;
+    height: 500px;
+  }
+
+  .backshape-about {
+    width: 150px;
+    height: 300px;
+  }
+
+  .header {
+    margin-top: 40px;
+    text-align: center;
+    margin: 40px auto 0 auto;
+  }
+
+  #icons-header {
+    margin: 20px auto;
+  }
+
+  footer {
+    font-size: 0.75rem;
   }
 }
